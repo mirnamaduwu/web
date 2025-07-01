@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #4a4a4a;
+            background: linear-gradient(to bottom, #f5f5dc, #d3d3d3); /* Cream mixed with gray */
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-pastel {
+            background-color: #f5f5dc; /* Cream color */
+        }
+        .text-pastel {
+            color: #d19a6a; /* A darker shade for text */
+        }
+        .border-pastel {
+            border-color: #e0e0e0; /* Light gray border */
+        }
+        .nav-item {
+            position: relative;
+        }
+        .nav-item:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #d19a6a; /* Darker shade for underline */
+            transition: width 0.3s ease;
+        }
+        .nav-item:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-pastel">
+    <!-- Floating filename indicator -->
+    <div class="fixed top-0 left-0 bg-white shadow-md px-3 py-1 rounded-br-lg text-xs z-50">
+        my_website.html
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white bg-opacity-90 shadow-sm z-40">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-semibold text-pastel">Websiteku</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#profil" class="nav-item">Profil</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#blog" class="nav-item">Blog</a>
+                <a href="#photos" class="nav-item">Foto-Foto</a>
+                <a href="#portfolio" class="nav-item">Portfolio</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section/Profil -->
+    <section id="profil" class="pt-32 pb-20 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <img src="fotoprofil.jpg" alt="Profile photo of a young professional woman smiling, wearing elegant casual clothes, standing against a soft pastel background" class="rounded-lg shadow-xl w-full max-w-md mx-auto">
+            </div>
+            <div class="md:w-1/2 md:pl-12 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">MIRNASARI<span class="text-pastel">MADUWU</span></h1>
+                <p class="text-xl mb-6">Programing & Desainer</p>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#portfolio" class="px-6 py-2 bg-pastel text-white rounded-full hover:bg-opacity-90 transition">My Work</a>
+                    <a href="#contact" class="px-6 py-2 border-2 border-pastel text-pastel rounded-full hover:bg-pastel hover:text-white transition">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-center">Tentang Saya</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
+                    <h3 class="text-2xl mb-4 text-pastel">Biodata</h3>
+                    <p class="mb-4">Hallo! nama saya Mirnasari Maduwu dari desa Hilisataro, Nias Selatan.</p>
+                    <p class="mb-4">Saya Mahasiswi dari UNIRAYA universitas nias raya, Program studi sistem informasi, fakultas sains dan teknologi..</p>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl mb-4 text-pastel">Skill</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Programing</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-pastel h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                            <div class="flex justify-between mb-1">
+                                <span>Animator</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-pastel h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-center">Blogger</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="blog1.jpg" alt="Workspace setup with laptop, notebook, and a cup of coffee on wooden desk" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Proyek Ujian Akhir Semester</h3>
+                        <p class="text-gray-600 mb-4">Ini adalah hasil dari proyek saya dirumah...</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="blog2.jpg" alt="Smartphone showing social media apps with colorful abstract background" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Codingan Website Pribadi</h3>
+                        <p class="text-gray-600 mb-4">Ini adalah foto codingan website pribadi saya...</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="blog3.jpg" alt="Woman holding camera looking at cityscape during sunset" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Hasil Akhir Dari Proyek</h3>
+                        <p class="text-gray-600 mb-4">Ini foto akhir dari hasl pembuatan website...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+            </div>
+        </div>
+    </section>
+
+    <!-- Photos Section -->
+    <section id="photos" class="py-20 bg-white px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-center">Foto-Foto</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="foto1.jpg" alt="Close-up portrait of a woman smiling in natural sunlight with soft focus background of greenery" class="w-full h-64 object-cover rounded-lg shadow-sm">
+                <img src="foto2.jpg" alt="Travel photo of woman standing in front of historical architecture in golden hour lighting" class="w-full h-64 object-cover rounded-lg shadow-sm">
+                <img src="foto3.jpg" alt="Flat lay of notebook, flowers, and coffee on wooden table with creative arrangement" class="w-full h-64 object-cover rounded-lg shadow-sm">
+                <img src="foto4.jpg" alt="Black and white portrait of woman in artistic pose with dramatic lighting" class="w-full h-64 object-cover rounded-lg shadow-sm">
+                <img src="foto5.jpg" alt="Beach sunset silhouette of woman walking with waves lapping at her feet" class="w-full h-64 object-cover rounded-lg shadow-sm">
+                <img src="foto6.jpg" alt="Closeup of hands typing on laptop keyboard in cozy home environment" class="w-full h-64 object-cover rounded-lg shadow-sm">
+                <img src="foto7.jpg" alt="Detail shot of woman drinking coffee while working on laptop in café" class="w-full h-64 object-cover rounded-lg shadow-sm">
+                <img src="foto8.jpg" alt="Aerial view of woman sitting on picnic blanket in park surrounded by flowers" class="w-full h-64 object-cover rounded-lg shadow-sm">
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-center">Portfolio</h2>
+            <div class="flex justify-center mb-12">
+                <div class="flex space-x-2">
+                    <button class="px-4 py-2 rounded-full bg-pastel text-white">All</button>
+                    <button class="px-4 py-2 rounded-full border border-pastel text-pastel">AI</button>
+                    <button class="px-4 py-2 rounded-full border border-pastel text-pastel">Eletronik</button>
+                    <button class="px-4 py-2 rounded-full border border-pastel text-pastel">Animator</button>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="portfolio-item">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/65e60d5e-a851-442b-b502-308940b4ef79.png" alt="Brand identity project showing logo, business cards, and stationery arranged neatly" class="w-full h-64 object-cover rounded-lg shadow-md">
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold">Artificial Inteligenc</h3>
+                        <p class="text-gray-600">Kecerdasan Buatan</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/97b6ae0f-ca1f-434b-83ee-a96219ab8ab2.png" alt="Website mockup displayed on multiple devices showing responsive design" class="w-full h-64 object-cover rounded-lg shadow-md">
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold">Eletronik</h3>
+                        <p class="text-gray-600">Teknologi</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="animator.jpeg" alt="Photoshoot series of fashion products with minimalist styling" class="w-full h-64 object-cover rounded-lg shadow-md">
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold">Animator</h3>
+                        <p class="text-gray-600">photoshoot</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white px-6">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold mb-6 text-center">Kontak</h2>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-1">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-1">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="px-6 py-3 bg-pastel text-white rounded-lg hover:bg-opacity-90 transition w-full">Send Message</button>
+                    </form>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-pastel bg-opacity-20 flex items-center justify-center text-pastel">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Email</h3>
+                                <p class="text-gray-600">mirnasarimaduwu845@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-pastel bg-opacity-20 flex items-center justify-center text-pastel">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Phone</h3>
+                                <p class="text-gray-600">+081263118681</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-pastel bg-opacity-20 flex items-center justify-center text-pastel">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3
